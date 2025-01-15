@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+
+    --primarycolor:#FF6A6A;
+    --secundcolor: #ffffff;
+    --tercerycolor: #56A0DC;
+
+
+    --fontText: Urbanist;
+
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+header{
+    background-color: var(--secundcolor);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    gap: 2rem;
+    font-family: var(--fontText);
+    text-align: center;
+    align-items: center;
+    position: relative;
+    right: 300px;
+}
+
+header a{
+    text-decoration: none;
+    font-family: var(--fontText);
+}
+
+
+select{
+    border: none;
+    padding: auto;
+    background-color: var(--secundcolor);
+    font-family: var(--fontText);
+    cursor: pointer;
+    font-size: 15px;
+}
+#textcolor{
+    color: var(--primarycolor);
+}
+#textcolor:hover{
+    color: var(--tercerycolor);
+    transition: 2ms;
+}
+option{
+    font-family: var(--fontText);
+    
+}
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    background-color: var(--tercerycolor);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.criarConta{
+    background-color: var(--secundcolor);
+    border: solid 1px;
+
+}
+.criarConta:hover{
+    background-color: var(--tercerycolor);
+    transition: 2ms;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+a{
+    color: black;
+}
+
+.buttons:hover{
+    transition: 2ms;
+    background-color: #ffffff;
+}
+.carrosel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#backgroundImage {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+}
+
+#frontImage {
+    position: absolute;
+   
+    height: auto;
+    left: 25%;
+    top: 20%;
+    z-index: 2;
+}
+
+#tagImage {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    right: 10%;
+    top: 10%;
+    z-index: 3;
+}
+
+#prevButton, #nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
+
