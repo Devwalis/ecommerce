@@ -1,8 +1,18 @@
 const Carrosel = {
     imagens: [
-        { id: '1', background: 'image/african-family-animate.svg', front: 'image/mouses/mouse1 2.png', tag: 'image/Group 115.png', title: 'Produto 1' },
-        { id: '2', background: 'image/good-team-animate.svg', front: 'image/mouses/mouse2.png', tag: 'image/Group 116.png', title: 'Produto 2' },
-        { id: '3', background: 'image/world-childrens-day-animate.svg', front: 'image/mouses/mouse3.png', tag: 'image/Group 117.png', title: 'Produto 3' },
+        { id: '1', background: 'image/african-family-animate.svg', 
+            front: 'image/mouses/mouse1 2.png', 
+            tag: 'image/Group 115.png', title: 
+            'Produto 1' },
+
+        { id: '2', background: 'image/good-team-animate.svg',
+             front: 'image/mouses/mouse2.png', 
+             tag: 'image/Group 116.png', 
+             title: 'Produto 2' },
+        { id: '3', background: 'image/world-childrens-day-animate.svg', 
+            front: 'image/mouses/mouse3.png', 
+            tag: 'image/Group 117.png', 
+            title: 'Produto 3' },
         // Adicione mais imagens conforme necessário
     ],
     currentIndex: 0,
