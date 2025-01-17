@@ -12,6 +12,7 @@
     --primarycolor:#FF6A6A;
     --secundcolor: #ffffff;
     --tercerycolor: #56A0DC;
+    --forcolor:#FFC965;
 
 
     --fontText: Urbanist;
@@ -25,6 +26,7 @@
 
 .flex{
     display: flex;
+    gap: 2rem;
 }
 header{
     background-color: var(--secundcolor);
@@ -126,11 +128,43 @@ a{
 
 #frontImage {
     position: absolute;
-    height: auto;
-    left: 100px;
+    height: 150px;
+    width: 150px;
+    left: 80px;
     top: 20%;
     z-index: 2;
    
+}
+.subtitulo{
+    color: var(--forcolor);
+}
+.detalhe{
+    position: relative;
+    bottom: 85px;
+    width: 100px;
+    left: 420px;
+}
+
+
+
+.button-saiba{
+    color: #ffffff;
+    font-size: 16px;
+    width: 130px;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 2px;
+}
+
+.button-saiba:hover{
+    transition: 2ms;
+    background-color: #225179;
+}
+
+.iconbutton{
+    height: 16px;
+    width: 16px;
+    padding: 1px;
 }
 .sombra{
     position: relative;
@@ -146,11 +180,15 @@ a{
 
 #tagImage {
     position: absolute;
-    width: 10%;
-    height: auto;
-    right: 500px;
+    width: 100px;
+    height: 100px;
+    
     top: -2%;
     z-index: 3;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    bottom: 200px;
 }
 
 #prevButton, #nextButton {
@@ -181,12 +219,40 @@ a{
 }
 
 .letreiro{
-    font-size: 30px;
+    font-size: 25px;
     font-family: var(--fontText);
     letter-spacing: 2px;
     word-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
 
 }
-letreiro h1{
-    
+.span{
+    color: var(--primarycolor);
+}
+.correselLetreiroCard{
+    padding: 20px;
+    background-color: #ECECEC;
+}
+
+
+.textoChamativo{
+    padding: 5px;
+    display: flex;
+    font-size: 20px;
+    box-shadow: 20px 20px solid black ;
+    border: black solid 1px;
+}
+
+.card2{
+    border-radius:7px ;
+    background: #E6E6E6;
+    text-align: center;
+    padding: 10px;
+    gap:5px;
+    display: flex;
+    flex-direction: column;
+
 }

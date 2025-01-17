@@ -3,12 +3,12 @@ const Carrosel = {
         { id: '1', background: 'image/african-family-animate.svg', 
             front: 'image/mouses/mouse1 2.png', 
             tag: 'image/Group 115.png', title: 
-            'Produto 1' },
+            'Mouse' },
 
         { id: '2', background: 'image/good-team-animate.svg',
-             front: 'image/mouses/mouse2.png', 
+             front: 'image/fones/fone1.png', 
              tag: 'image/Group 116.png', 
-             title: 'Produto 2' },
+             title: 'Notbook' },
         { id: '3', background: 'image/world-childrens-day-animate.svg', 
             front: 'image/mouses/mouse3.png', 
             tag: 'image/Group 117.png', 
