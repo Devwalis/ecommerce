@@ -84,6 +84,9 @@ button{
     border-radius: 10px;
     cursor: pointer;
 }
+section{
+    padding: 20px 70px;
+}
 .criarConta{
     background-color: var(--secundcolor);
     border: solid 1px;
@@ -255,4 +258,46 @@ a{
     display: flex;
     flex-direction: column;
 
+}
+.carroselContainer {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo para cada card */
+.card2 {
+    min-width: 200px; /* Largura mínima de cada card */
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Botões de navegação */
+.buttonsPasseAnte {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.buttonsPasseAnte img {
+    width: 20px; /* Tamanho do ícone */
+    height: 20px;
+}
+
+/* Posicionamento dos botões */
+.buttonsPasseAnte:first-of-type {
+    left: 10px; /* Botão "anterior" */
+}
+
+.buttonsPasseAnte:last-of-type {
+    right: 10px; /* Botão "próximo" */
 }
