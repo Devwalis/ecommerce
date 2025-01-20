@@ -237,7 +237,44 @@ a{
 }
 .correselLetreiroCard{
     padding: 20px;
-    background-color: #ECECEC;
+    background: rgb(249,246,246);
+background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 99%);
+    
+}
+.ofertastatica{
+    letter-spacing: 1px;
+    font-family: var(--fontText);
+    width: 340px;
+    height: 420px;
+    background-color: #f7f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 1rem;
+    border-radius: 10px;
+}
+.ofertastatica img{
+    width: 100%;
+    height: 100%;}
+
+.ofertaCarrosel{
+    padding: 10px;
+    width: 1000px;
+    height: 420px;
+    border: 1px solid black;
+    align-items: center;
+    font-family: var(--fontText);
+    display: flex;
+    border-radius: 10px;
+    gap: 1rem;
+    background-color: #ffffff;
+}
+.card3{
+    padding: 20px;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+
 }
 
 
@@ -247,6 +284,9 @@ a{
     font-size: 20px;
     box-shadow: 20px 20px solid black ;
     border: black solid 1px;
+}
+.correselLetreiroCard{
+    
 }
 
 .card2{
@@ -286,18 +326,45 @@ a{
     padding: 10px;
     cursor: pointer;
     z-index: 100;
+    background: #ffffff00;
 }
 
 .buttonsPasseAnte img {
-    width: 20px; /* Tamanho do ícone */
-    height: 20px;
+    width: 50px; /* Tamanho do ícone */
+    height: 50px;
 }
 
-/* Posicionamento dos botões */
-.buttonsPasseAnte:first-of-type {
-    left: 10px; /* Botão "anterior" */
-}
+
 
 .buttonsPasseAnte:last-of-type {
     right: 10px; /* Botão "próximo" */
 }
+
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card2 {
+    flex: 0 0 auto;
+    width: 200px; /* Ajuste a largura conforme necessário */
+    margin-right: 10px; /* Espaçamento entre os cards */
+    text-align: center;
+}
+
+.buttonsPasseAnte {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+

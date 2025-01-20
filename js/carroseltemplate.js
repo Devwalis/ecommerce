@@ -54,3 +54,90 @@ const Carrosel = {
 window.onload = function() {
     Carrosel.init();
 };
+
+
+const cardData = [
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    }
+];
+
+let currentIndex = 0;
+
+// Função para carregar os dados
+function loadCards() {
+    createCards(cardData); // Usa os dados da variável cardData
+}
+
+// Função para criar os cards dinamicamente
+function createCards(data) {
+    const carouselInner = document.querySelector('.carousel-inner');
+
+    data.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('card2');
+
+        card.innerHTML = `
+            <img src="${item.imageSrc}" alt="${item.title}">
+            <h2>${item.title}</h2>
+            <p>${item.price}</p>
+            <button>${item.buttonText}</button>
+        `;
+
+        carouselInner.appendChild(card);
+    });
+}
+
+// Função para mover o carrossel
+function moveCarousel(direction) {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const cards = document.querySelectorAll('.card2');
+    const cardWidth = cards[0].offsetWidth + 10; // Largura do card + margem
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } else if (currentIndex > cards.length - 1) {
+        currentIndex = cards.length - 1;
+    }
+
+    const offset = -currentIndex * cardWidth;
+    carouselInner.style.transform = `translateX(${offset}px)`;
+}
+
+// Carrega os cards quando a página é carregada
+window.addEventListener('load', loadCards);
