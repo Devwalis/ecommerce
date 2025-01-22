@@ -102,7 +102,7 @@ function loadCards() {
     createCards(cardData); // Usa os dados da variável cardData
 }
 
-// Função para criar os cards dinamicamente
+
 function createCards(data) {
     const carouselInner = document.querySelector('.carousel-inner');
 
@@ -121,11 +121,11 @@ function createCards(data) {
     });
 }
 
-// Função para mover o carrossel
+
 function moveCarousel(direction) {
     const carouselInner = document.querySelector('.carousel-inner');
     const cards = document.querySelectorAll('.card2');
-    const cardWidth = cards[0].offsetWidth + 10; // Largura do card + margem
+    const cardWidth = cards[0].offsetWidth + 10; 
 
     currentIndex += direction;
 
@@ -139,5 +139,66 @@ function moveCarousel(direction) {
     carouselInner.style.transform = `translateX(${offset}px)`;
 }
 
-// Carrega os cards quando a página é carregada
+
 window.addEventListener('load', loadCards);
+
+
+
+const cardOferta = [
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+];
+
+
+
+function carregarcard() {
+    ConstruirtCardDinamico(cardOferta);
+}
+
+function ConstruirtCardDinamico(pega) {
+    const cardContainer = document.querySelector('.carroselContainer');
+
+    pega.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('card3');
+        card.innerHTML = `
+            <img src="${item.imageSrc}" alt="Produto Mouse">
+            <h2>${item.title}</h2>
+            <p>${item.price}</p>
+            <button>${item.buttonText}</button>
+        `;
+        cardContainer.appendChild(card);
+    });
+}
+
+function passaCarrosel(direction) {
+    const cardContainer = document.querySelector('.carroselContainer');
+    const cards = document.querySelectorAll('.card3');
+    const cardWidth = cards[0].offsetWidth; // Largura de um card
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } else if (currentIndex > cards.length - 1) {
+        currentIndex = cards.length - 1;
+    }
+
+    const offset = -currentIndex * cardWidth;
+    cardContainer.style.transform = `translateX(${offset}px)`;
+}
+
+document.addEventListener('DOMContentLoaded', carregarcard);
+
+
+

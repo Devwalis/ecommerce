@@ -269,7 +269,9 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
     border-radius: 10px;
     gap: 1rem;
     background-color: #ffffff;
-}
+} 
+
+
 .card3{
     padding: 20px;
     background-color: #E6E6E6;
