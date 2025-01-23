@@ -157,6 +157,7 @@ const cardOferta = [
         price: "75,00",
         buttonText: "Adicionar ao carrinho"
     },
+    // Adicione mais cards conforme necessário
 ];
 
 
@@ -199,6 +200,3 @@ function passaCarrosel(direction) {
 }
 
 document.addEventListener('DOMContentLoaded', carregarcard);
-
-
-
