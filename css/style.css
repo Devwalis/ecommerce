@@ -260,7 +260,7 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
 
 .ofertaCarrosel{
     padding: 10px;
-    width: 1000px;
+    width: 1080px;
     height: 420px;
     border: 1px solid black;
     align-items: center;
@@ -411,6 +411,50 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
    align-items: center;
    text-align: row;
    left: 450px;
+
+}
+
+
+.grid{
+    display: grid;
+    height: 500px;
+    border: solid 1px black;
+    margin: auto;
+    border-radius: 20px;
+
+}
+.imgCategoria{
+    width:101px ;
+    height: 90;
+}
+.carroselGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    gap: 2rem;
+}
+.grid h2{
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--fontText);
+    color: var(--colorText);
+    padding: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.categoria{
+    display: flex;
+
+}
+
+.categoria a{
+    text-decoration: none;
+   align-items: center;
+    display: flex;
+    gap:1rem;
+
 
 }
 

@@ -1,5 +1,6 @@
 const Carrosel = {
-    imagens: [
+
+        imagens: [
         { id: '1',
          background: 'image/african-family-animate.svg', 
         front: 'image/mouses/mouse1 2.png', 
