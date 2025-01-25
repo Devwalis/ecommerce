@@ -413,6 +413,12 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
    left: 450px;
 
 }
+.ofertas{
+    background-color: #ECECEC;
+}
+.categorias{
+background-color: #EBEBEB;
+}
 
 
 .grid{
@@ -421,6 +427,8 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
     border: solid 1px black;
     margin: auto;
     border-radius: 20px;
+    background-color: white;
+    box-shadow: 20px;
 
 }
 .imgCategoria{
@@ -441,22 +449,36 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
     padding: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    
 
 }
 
 .categoria{
     display: flex;
+    
+   
+    
 
 }
+
 
 .categoria a{
     text-decoration: none;
-   align-items: center;
+    align-items: center;
     display: flex;
-    gap:1rem;
-
-
+   
+    gap:2rem;
+    border: 1px solid black;
+    border-radius:10px ;
 }
+.categoria a img{
+    background-color:#A4A4A4;
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+
 
 
 
