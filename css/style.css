@@ -163,6 +163,10 @@ a{
     transition: 2ms;
     background-color: #225179;
 }
+button:hover{
+    transition: 2ms;
+    background-color: #225179;
+}
 
 .iconbutton{
     height: 16px;
@@ -253,6 +257,8 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
     padding: 20px;
     gap: 1rem;
     border-radius: 10px;
+    box-shadow: 4px 13px 22px -8px rgba(0,0,0,0.75);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 88%, rgba(133,133,133,1) 100%); 
 }
 .ofertastatica img{
     width: 100%;
@@ -260,15 +266,15 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
 
 .ofertaCarrosel{
     padding: 10px;
-    width: 1080px;
+    background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 99%);
     height: 420px;
-    border: 1px solid black;
     align-items: center;
     font-family: var(--fontText);
     display: flex;
     border-radius: 10px;
     gap: 1rem;
-    background-color: #ffffff;
+   
+    box-shadow: 4px 13px 22px -8px rgba(0,0,0,0.75);
 } 
 
 
@@ -284,8 +290,8 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
     padding: 5px;
     display: flex;
     font-size: 20px;
-    box-shadow: 20px 20px solid black ;
-    border: black solid 1px;
+    box-shadow: 4px 13px 22px -8px rgba(0,0,0,0.75);
+    
 }
 .correselLetreiroCard{
     
@@ -308,17 +314,18 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
     width: 100%;
 }
 
-/* Estilo para cada card */
+
 .card2 {
-    min-width: 200px; /* Largura mínima de cada card */
+    min-width: 200px; 
     margin: 0 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
     transition: transform 0.5s ease-in-out;
+    font-family: var(--fontText);
 }
 
-/* Botões de navegação */
+
 .buttonsPasseAnte {
     position: absolute;
     top: 50%;
@@ -332,7 +339,7 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
 }
 
 .buttonsPasseAnte img {
-    width: 50px; /* Tamanho do ícone */
+    width: 50px; 
     height: 50px;
 }
 
@@ -384,8 +391,13 @@ background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 
 
 .card3 {
     flex: 0 0 auto;
-    width: 200px; /* Defina a largura dos cards conforme necessário */
-    margin-right: 10px; /* Espaçamento entre os cards */
+    width: 200px; 
+    margin-right: 10px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    font-family: var(--fontText);
 }
 
 .buttonsAnteOferta, .buttonsPasseOferta {
@@ -424,11 +436,11 @@ background-color: #EBEBEB;
 .grid{
     display: grid;
     height: 500px;
-    border: solid 1px black;
+    
     margin: auto;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 20px;
+    box-shadow: 4px 13px 22px -8px rgba(0,0,0,0.75);
 
 }
 .imgCategoria{
@@ -439,7 +451,7 @@ background-color: #EBEBEB;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
-    gap: 2rem;
+    gap: 4rem;
 }
 .grid h2{
     text-align: center;
@@ -448,7 +460,7 @@ background-color: #EBEBEB;
     color: var(--colorText);
     padding: 20px;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    
     
 
 }
@@ -466,9 +478,10 @@ background-color: #EBEBEB;
     text-decoration: none;
     align-items: center;
     display: flex;
-   
+    background-color: #e1e1e1;
+    padding: 0px 0px 0px 20px;
     gap:2rem;
-    border: 1px solid black;
+    
     border-radius:10px ;
 }
 .categoria a img{
@@ -477,6 +490,8 @@ background-color: #EBEBEB;
     height: 60px;
     border-radius: 10px;
 }
+
+
 
 
 
