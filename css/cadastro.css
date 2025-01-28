@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +25,7 @@ header{
    
 }
 .Cadastro{
-    padding: 20px;
+    padding: 50px;
 }
 .formularios {
     max-width: 400px;
