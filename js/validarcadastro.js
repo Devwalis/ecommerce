@@ -12,4 +12,14 @@ document.getElementById('btnVoltar').addEventListener('click', function() {
     document.getElementById('formCadastro').style.display = 'block';
 });
 
+function validaNome(){
+    var nome = document.getElementById('nome').value;
+    if(nome.length < 10){
+        alert('O nome deve ter pelo menos 10 caracteres');
+        return false;
+}
+}
+
+
+
 
