@@ -90,6 +90,14 @@ button[type="submit"] {
 button[type="button"] {
     background-color: #f0f0f0;
 }
+.erro-validacao {
+    font-size: 0.8em;
+    margin-top: 5px;
+    padding: 2px 5px;
+    background-color: #ffe6e6;
+    border: 1px solid #ff9999;
+    border-radius: 4px;
+}
 
 
 
