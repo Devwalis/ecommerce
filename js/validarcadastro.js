@@ -11,3 +11,5 @@ document.getElementById('btnVoltar').addEventListener('click', function() {
   
     document.getElementById('formCadastro').style.display = 'block';
 });
+
+

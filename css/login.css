@@ -7,6 +7,85 @@
 
 header{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+   
+
+}
+.logo{
+   
+    margin: auto;
+}
+.login{
+    margin: auto;
+    height: 600px;
+    display: flex;
+    justify-content: center;
     
 }
+.login1{
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.189) 10px 10px 10px 10px;
+    
+}
+.titulo{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+    display: flex;
+}
+
+form{
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+}
+.input{
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    width:640px;
+    align-items: center;
+}
+input{
+    padding:10px;
+    border-radius: 10px;
+    border: solid 1px black;
+    width:350px;
+    display: flex;
+    
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    background: #56A0DC;
+    border: none;
+    color: white;
+}
+button:hover{
+    background: #3A7FED;
+}
+label{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    position: relative;
+    right: 130px;
+   
+
+}
+#Lembre-me{
+   position: relative;
+   top: 35px;
+   right: 65px;
+
+}
+.SejaBemVindo{
+    height: 600px;
+    width: 600px;
+}
+
+
