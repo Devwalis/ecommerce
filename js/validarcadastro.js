@@ -96,16 +96,98 @@ document.getElementById('btnVoltar').addEventListener('click', function(e) {
 });
 
 
-document.getElementById('email').addEventListener('input', function() {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!regex.test(this.value)) {
-        showError(this, 'Email inválido');
-    } else {
-        const erro = this.nextElementSibling;
-        if(erro && erro.classList.contains('erro-validacao')) {
-            erro.remove();
+async function consultaaCEP(cep){
+    cep = cep.replace(/\D/g, '');
+
+    if(cep.length !== 8){
+        showError(document.getElementById('Cep'), 'CEP inválido');
+        return;
+    }
+
+    try{
+        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        const data = await response.json();
+
+        if(data.erro){
+            throw new Error('CEP não encontrado');
+
+        }
+
+        document.getElementById('logradouro').value = data.logradouro || '';
+        document.getElementById('bairro').value = data.bairro || '';
+        document.getElementById('cidade').value = data.localidade || '';
+        document.getElementById('Uf').value = data.uf || '';
+
+        document.getElementById('complemento').focus();
+
+    }catch (error){
+        showError(document.getElementById('Cep'), error.message);
+    }
+}
+
+function validarEndereco(){
+    let isValid = true;
+    const campos = {
+        cep:{
+            element: document.getElementById('Cep'),
+            regex: /^\d{8}$/,
+            mensagem: 'CEP inválido'
+        },
+        logradouro: {
+            element: document.getElementById('logradouro'),
+            mensagem: 'Logradouro obrigatório'
+        },
+        cidade: {
+            element: document.getElementById('cidade'),
+            mensagem: 'Cidade obrigatória'
+        },
+        Uf: {
+            element: document.getElementById('Uf'),
+            regex: /^[A-Z]{2}$/,
+            mensagem: 'UF inválida (2 letras maiúsculas)'
+        },
+        bairro: {
+            element: document.getElementById('bairro'),
+            mensagem: 'Bairro obrigatório'
+        }
+
+    };
+
+
+
+    for(const campo in campos){
+        const config = campos[campo];
+        const value = config.element.value.trim();
+
+        if(!value){
+            showError(config.element, config.mensagem);
+            isValid = false;
+        
+        }
+        else if(config.regex && !config.regex.test(value)){
+            showError(config.element, config.mensagem);
+            isValid = false;
         }
     }
+    return isValid;
+}
+document.querySelectorAll('.erro-validacao').forEach(erro => erro.remove());
+
+document.getElementById('Cep').addEventListener('blur', function(e){
+    consultaaCEP(this.value);
 });
+document.getElementById('formEndereco').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    if(validarEndereco()){
+        setTimeout(() => {
+            window.location.href = 'login.html';
+        }, 1000);
+    }
+});
+
+
+
+
 
 
