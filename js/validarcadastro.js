@@ -146,7 +146,7 @@ const enviarFormulario = async event =>{
 
 
 try{
-    const response = await fetch('http://localhost:8081/auth/cadastrar', {
+    const response = await fetch('http://localhost:8081/usuarios/cadastrar', {
         method: 'POST',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify(dadosUsuario)
