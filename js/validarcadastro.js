@@ -138,7 +138,7 @@ const enviarFormulario = async event =>{
                 logradouro: document.getElementById('logradouro').value,
                 uf: document.getElementById('uf').value,
                 bairro: document.getElementById('bairro').value,
-                numero: document.getElementById('numero').value,
+                cidade: document.getElementById('cidade').value,
                 complemento: document.getElementById('complemento').value
         }
         
