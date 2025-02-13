@@ -2,7 +2,7 @@
 const configValidacao = {
     camposPrimeiraParte:{
         nome:{
-            regex: /^[azA-ZÀ-ù\s]{5,}$/,
+            regex: /^[a-zA-ZÀ-úçÇãÃõÕâÂêÊîÎôÔûÛáÁéÉíÍóÓúÚ\s]{5,}$/,
             mensagem:'Nome de ter pelo menos 5 caracteres'
 
         },
@@ -118,6 +118,24 @@ const validarPrimeiraParte =()=> {
         mostrarErro(cepInput, error.message);
     }
  };
+ const validarEndereco = () => {
+    limparErros();
+    let isValid = true;
+    const campos = configValidacao.camposEndereco;
+
+const cepInput = document.getElementById('cep');
+    if(!campos.cep.regex.test(cepInput.value.replace(/\D/g, ''))){
+        mostrarErro(cepInput, campos.cep.mensagem);
+        isValid = false;
+  }
+const ufInput = document.getElementById('uf');
+if(!campos.uf.regex.test(ufInput.value.trim())){
+    mostrarErro(ufInput, campos.uf.mensagem);
+    isValid = false;
+}
+return isValid;
+
+};
 
  
 const enviarFormulario = async event =>{
@@ -146,7 +164,7 @@ const enviarFormulario = async event =>{
 
 
 try{
-    const response = await fetch('http://localhost:8081/usuarios/cadastrar', {
+    const response = await fetch('http://localhost:8080/usuarios/cadastrar', {
         method: 'POST',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify(dadosUsuario)
@@ -160,6 +178,8 @@ try{
     console.error('Erro:', error);
     alert(error.message);
 };
+
+
 
 };
 
