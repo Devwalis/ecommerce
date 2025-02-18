@@ -21,6 +21,11 @@ const configValidacao = {
         },
         dataNascimento:{
             mensagem: 'Data de nascimento obrigatória'
+        },
+
+        cpf: {
+            regex: /^\d{11}$/,
+            mensagem: 'CPF deve conter 11 digitos numéricos'
         }
 
     }
