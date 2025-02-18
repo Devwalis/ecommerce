@@ -23,26 +23,8 @@ const configValidacao = {
             mensagem: 'Data de nascimento obrigatória'
         }
 
-
-    },
-    camposEndereco: {
-        cep: {
-            regex: /^\d{8}$/,
-            mensagem:'CEP inválido'
-        },
-        cidade:{
-            mensagem: 'Cidade obrigatoria'
-        },
-        uf:{
-            regex:/^[A-Z]{2}$/,
-            mensagem:'UF inválida (2 letras maiúsculas'
-        },
-        bairro:{
-            mensagem: 'Bairro obrigatório'
-        }
     }
-    };
-
+}
 
 
 const mostrarErro = (input, mensagem) => {
@@ -93,49 +75,7 @@ const validarPrimeiraParte =()=> {
     return isValid;
     
 };
- const consultarCEP = async cep =>{
-    cep = cep.replace(/\D/g, '');
-    const cepInput = document.getElementById('cep');
-
-
-    if(cep.length !== 8){
-        mostrarErro(cepInput, 'CEP inválido');
-        return;
-    }
-    try{
-        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        const data = await response.json();
-
-        if(data.erro) throw new Error('CEP não encontrado');
-
-        document.getElementById('logradouro').value = data.logradouro || '';
-        document.getElementById('bairro').value = data.bairro || '';
-        document.getElementById('cidade').value = data.localidade || '';
-        document.getElementById('uf').value = data.uf || '';
-        document.getElementById('complemento').focus();
-
-    }catch(error){
-        mostrarErro(cepInput, error.message);
-    }
- };
- const validarEndereco = () => {
-    limparErros();
-    let isValid = true;
-    const campos = configValidacao.camposEndereco;
-
-const cepInput = document.getElementById('cep');
-    if(!campos.cep.regex.test(cepInput.value.replace(/\D/g, ''))){
-        mostrarErro(cepInput, campos.cep.mensagem);
-        isValid = false;
-  }
-const ufInput = document.getElementById('uf');
-if(!campos.uf.regex.test(ufInput.value.trim())){
-    mostrarErro(ufInput, campos.uf.mensagem);
-    isValid = false;
-}
-return isValid;
-
-};
+ 
 
  
 const enviarFormulario = async event =>{
@@ -151,16 +91,10 @@ const enviarFormulario = async event =>{
         telefone: document.getElementById('telefone').value,
         cpf: document.getElementById('cpf').value,
         tipoUsuario: document.getElementById('tipoUsuario').value,
-            endereco: {
-                cep: document.getElementById('cep').value,
-                logradouro: document.getElementById('logradouro').value,
-                uf: document.getElementById('uf').value,
-                bairro: document.getElementById('bairro').value,
-                cidade: document.getElementById('cidade').value,
-                complemento: document.getElementById('complemento').value
+           
         }
         
-    }
+    
 
 
 try{
@@ -184,28 +118,10 @@ try{
 };
 
 //eventos que vão escutar os clicks
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('btnProximo').addEventListener('click', e => {
-        e.preventDefault();
-        if(validarPrimeiraParte()){
-            document.getElementById('formCadastro').style.display = 'none';
-            document.getElementById('formEndereco').style.display = 'block';
-
-        }
-    });
-    document.getElementById('btnVoltar').addEventListener('click', e => {
-        e.preventDefault();
-        document.getElementById('formEndereco').style.display = 'none';
-        document.getElementById('formCadastro').style.display = 'block';
-});
-
-document.getElementById('cep').addEventListener('blur', e =>  {
-    consultarCEP(e.target.value);
 
 
-});
 document.getElementById('formEndereco').addEventListener('submit', enviarFormulario);
 
-});
+
 
 
