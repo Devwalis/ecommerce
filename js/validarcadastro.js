@@ -86,7 +86,7 @@ const validarPrimeiraParte =()=> {
 const enviarFormulario = async event =>{
     event.preventDefault();
 
-    if (!validarEndereco()) return;
+    
 
     const dadosUsuario = {
         nome: document.getElementById('nome').value,
@@ -103,12 +103,14 @@ const enviarFormulario = async event =>{
 
 
 try{
-    const response = await fetch('http://localhost:8080/usuarios/cadastrar', {
+    const response = await fetch('http://localhost:8081/usuarios/cadastrar', {
         method: 'POST',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify(dadosUsuario)
 
     });
+    const responseData = await response.json()
+    console.log('Resposta do servidor:', responseData);
     if(!response.ok) throw new Error('Erro ao cadastrar usuário');
 
     window.location.href = 'login.html';
@@ -125,7 +127,7 @@ try{
 //eventos que vão escutar os clicks
 
 
-document.getElementById('formEndereco').addEventListener('submit', enviarFormulario);
+document.getElementById('formCadastro').addEventListener('submit', enviarFormulario);
 
 
 
