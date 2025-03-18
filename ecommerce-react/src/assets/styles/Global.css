@@ -1,0 +1,18 @@
+:root {
+    --primarycolor: #FF6A6A;
+    --secundcolor: #ffffff;
+    --tercerycolor: #56A0DC;
+    --forcolor: #FFC965;
+    --fontText: 'Urbanist', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontText);
+  }
+  
+  body {
+    background-color: #f5f5f5;
+  }
