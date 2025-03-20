@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useFromValidation } from '../../hooks/useFormValidation';
+import useFromValidation from '../../hooks/useFormValidation';
 import styles from './Cadastro.module.css';
 
 
 const Cadastro = () => {
     const [ formData, setFormData] = useState({
-        nome: '',
+        nome: value => !value ?  'Nome é obrigatorio': '',
         email:'',
         password:'',
     });
