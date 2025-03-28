@@ -26,7 +26,31 @@ const AuthHeader = ({ user }) => {
 
 </nav>
 
-<div className="styles actions">
+<div className="styles.actions">
+        <div className={styles.userControls}>
+            <Link to="/carrinho" className={styles.iconButton}>
+            <img src="/images/icons/carrinho.png" alt="Carrinho" />
+            </Link>
+        </div>
+
+        <div className={styles.notification}>
+            <img src="/images/icons/notificacao.png" alt="Notificações" />
+            <span className={styles.badge}>3</span>
+        </div>
+
+        <div className={styles.home}>
+            <img src="/images/icons/home" alt="home" />
+            <span className={styles.badge}>3</span>
+        </div>
+
+        <div className={styles.profileDropdown}>
+            <img 
+            src={user.photo || '/images/avatar-placegolder.png'} 
+            alt="perfil" 
+            className={styles.profilePhoto}/>
+        </div>
+
+
 
 </div>
     
