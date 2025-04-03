@@ -7,15 +7,15 @@ const Carrosel = {
         tag: 'image/Group 115.png',
          title: 'Mouse' },
 
-        { id: '2', background: 'image/good-team-animate.svg',
+        { id: '2', background: 'image/african-family-animate.svg',
              front: 'image/fones/fone1.png', 
-             tag: 'image/Group 116.png', 
-             title: 'Notbook' },
+             tag: 'image/tagR$200.png', 
+             title: 'Fone' },
 
-        { id: '3', background: 'image/world-childrens-day-animate.svg', 
-            front: 'image/mouses/mouse3.png', 
+        { id: '3', background: 'image/african-family-animate.svg', 
+            front: 'image/notbooks/notbook1.png', 
             tag: 'image/Group 117.png', 
-            title: 'Produto 3' },
+            title: 'notbook' },
         
     ],
     currentIndex: 0,

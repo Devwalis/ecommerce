@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue-tech</title>
+    <link rel="stylesheet" href="clienteAuth.css">
+    <link rel="icon" href="/front-end-tradicional/image/logo.png">
+    <title>Blue tech e-commerce</title>
 </head>
 <body>
 
@@ -18,14 +20,37 @@
                 <select name="Categoria" id="">Categoria
                     <option value="Monitores">Celulares</option>
                     <option value="Monitores">Notbooks</option>
-                    <option value="Monitores"></option>
+                    <option value="Mouses">Mouses</option>
                     <option value="Monitores">Monitores</option>
                 </select>
 
-                <Link to="/cupons">Cupons</Link>
-                <Link to="/cupons">Ofertas</Link>
-
+                <a href="#">Cupons</a>
+                <a href="#">Ofertas</a>
             </nav>
+
+            <div class="user-action">
+                <div class="notification-badge">
+                    <img src="imgae/icons/bell.png" alt="Notificações" class="action-icon">
+                    <span class="badge">3</span>
+                </div>
+
+                <a href="carrinho.html" class="icon-carrinho">
+                    <img src="/image/icons/cart.png" alt="Carrinho" class="action-icon">
+                </a>
+
+                <div class="dropdown-perfil">
+                    <button class="perfil-toggle">
+                        <img src="image/icons/user.png" alt="Perfil" class="action-icon">
+                    </button>
+                    <div>
+                        <a href="enderecos.html" class="dropdown-item">Meus Endereços</a>
+                        <a href="pedidos.html" class="dropdown-item">Meus Pedidos</a>
+                        <a href="suporte.html" class="dropdown-item"> Suporte</a>
+                        <hr class="divide">
+                        <a href="logout.html" class="dropdown-item">Sair</a>
+                    </div>
+                </div>  
+            </div>
             
         </div>
     </header>

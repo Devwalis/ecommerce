@@ -39,7 +39,7 @@ const AuthHeader = ({ user }) => {
         </div>
 
         <div className={styles.home}>
-            <img src="/images/icons/home" alt="home" />
+            <img src="/images/icons/home.png" alt="home" />
             <span className={styles.badge}>3</span>
         </div>
 
