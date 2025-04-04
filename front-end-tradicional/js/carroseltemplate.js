@@ -59,38 +59,38 @@ window.onload = function() {
 
 const cardData = [
     {
-        imageSrc: "image/mouses/mouse1 2.png",
+        imageSrc: "image/teclados/teclado1.png",
         title: "Mouse Gamer",
         price: "75,00",
         buttonText: "Adicionar ao carrinho"
     },
     {
-        imageSrc: "image/mouses/mouse1 2.png",
+        imageSrc: "image/notbooks/notbook1.png",
         title: "Mouse Gamer",
-        price: "75,00",
+        price: "2.500",
         buttonText: "Adicionar ao carrinho"
     },
     {
-        imageSrc: "image/mouses/mouse1 2.png",
+        imageSrc: "image/fones/fone1.png",
         title: "Mouse Gamer",
-        price: "75,00",
+        price: "200.00",
         buttonText: "Adicionar ao carrinho"
     },
     {
-        imageSrc: "image/mouses/mouse1 2.png",
-        title: "Mouse Gamer",
-        price: "75,00",
+        imageSrc: "image/cadeiras/cadeira1.png",
+        title: "Cadeiras game",
+        price: "1000.00",
         buttonText: "Adicionar ao carrinho"
     },
     {
-        imageSrc: "image/mouses/mouse1 2.png",
-        title: "Mouse Gamer",
-        price: "75,00",
+        imageSrc: "image/consoles/ps51.png",
+        title: "PS5",
+        price: "2000.00",
         buttonText: "Adicionar ao carrinho"
     },
     {
-        imageSrc: "image/mouses/mouse1 2.png",
-        title: "Mouse Gamer",
+        imageSrc: "image/ssds/ssd1.png",
+        title: "SSD",
         price: "75,00",
         buttonText: "Adicionar ao carrinho"
     }
@@ -158,9 +158,57 @@ const cardOferta = [
         price: "75,00",
         buttonText: "Adicionar ao carrinho"
     },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
+    {
+        imageSrc: "image/mouses/mouse1 2.png",
+        title: "Mouse Gamer",
+        price: "75,00",
+        buttonText: "Adicionar ao carrinho"
+    },
     // Adicione mais cards conforme necessário
 ];
-
+let current = 0;
 
 
 function carregarcard() {
@@ -186,18 +234,22 @@ function ConstruirtCardDinamico(pega) {
 function passaCarrosel(direction) {
     const cardContainer = document.querySelector('.carroselContainer');
     const cards = document.querySelectorAll('.card3');
-    const cardWidth = cards[0].offsetWidth; // Largura de um card
+    
 
-    currentIndex += direction;
+    if (cards.length === 0) return;
 
-    if (currentIndex < 0) {
-        currentIndex = 0;
-    } else if (currentIndex > cards.length - 1) {
-        currentIndex = cards.length - 1;
-    }
+    current = (current + direction + cards.length) % cards.length;
 
+    const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(cards[0]).marginRight);
+
+    cardContainer.style.transition ='transform 0.5s ease-in-out';
     const offset = -currentIndex * cardWidth;
     cardContainer.style.transform = `translateX(${offset}px)`;
+
+
+    setTimeout(() =>{
+        cardContainer.style.transition = 'none';
+    }, 500);
 }
 
 document.addEventListener('DOMContentLoaded', carregarcard);
