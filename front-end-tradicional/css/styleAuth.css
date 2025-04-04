@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+
+    --primarycolor:#FF6A6A;
+    --secundcolor: #ffffff;
+    --tercerycolor: #56A0DC;
+    --forcolor:#FFC965;
+
+
+    --fontText: Urbanist;
+
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    gap: 2rem;
+}
+header{
+    background-color: var(--secundcolor);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    gap: 2rem;
+    font-family: var(--fontText);
+    text-align: center;
+    align-items: center;
+    position: relative;
+    right: 300px;
+}
+
+header a{
+    text-decoration: none;
+    font-family: var(--fontText);
+}
+
+
+select{
+    border: none;
+    padding: auto;
+    background-color: var(--secundcolor);
+    font-family: var(--fontText);
+    cursor: pointer;
+    font-size: 15px;
+}
+#textcolor{
+    color: var(--primarycolor);
+}
+#textcolor:hover{
+    color: var(--tercerycolor);
+    transition: 2ms;
+}
+option{
+    font-family: var(--fontText);
+    
+}
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    background-color: var(--tercerycolor);
+    border-radius: 10px;
+    cursor: pointer;
+}
+section{
+    padding: 20px 70px;
+}
+.criarConta{
+    background-color: var(--secundcolor);
+    border: solid 1px;
+
+}
+.criarConta:hover{
+    background-color: var(--tercerycolor);
+    transition: 2ms;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+a{
+    color: black;
+}
+
+.buttons:hover{
+    transition: 2ms;
+    background-color: #ffffff;
+}
+.carrosel {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#backgroundImage {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    z-index: 1;
+    text-align: center;
+}
+
+#frontImage {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 80px;
+    top: 20%;
+    z-index: 2;
+   
+}
+.subtitulo{
+    color: var(--forcolor);
+}
+.detalhe{
+    position: relative;
+    bottom: 85px;
+    width: 100px;
+    left: 420px;
+}
+
+
+
+.button-saiba{
+    color: #ffffff;
+    font-size: 16px;
+    width: 130px;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 2px;
+}
+
+.button-saiba:hover{
+    transition: 2ms;
+    background-color: #225179;
+}
+button:hover{
+    transition: 2ms;
+    background-color: #225179;
+}
+
+.iconbutton{
+    height: 16px;
+    width: 16px;
+    padding: 1px;
+}
+.sombra{
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.189) 10px 10px 10px 10px;
+    
+    width: 50px;
+    border-radius: 50px;
+    bottom: 80px;
+    left: 350px;
+    z-index: 5;
+    border: none;
+}
+
+#tagImage {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    
+    top: -2%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    bottom: 200px;
+}
+
+#prevButton, #nextButton {
+    position: absolute;
+    top: 30%;
+    
+    z-index: 4;
+    border:none;
+    background-color: transparent;
+
+    
+}
+
+#prevButton {
+    
+    
+  
+}
+
+#nextButton {
+   left: 255px;
+}
+#productTitle{
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--fontText);
+    
+}
+
+.letreiro{
+    font-size: 25px;
+    font-family: var(--fontText);
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+
+}
+.span{
+    color: var(--primarycolor);
+}
+.correselLetreiroCard{
+    padding: 20px;
+    background: rgb(249,246,246);
+background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 99%);
+    
+}
+.ofertastatica{
+    letter-spacing: 1px;
+    font-family: var(--fontText);
+    width: 340px;
+    height: 420px;
+    background-color: #f7f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 13px 22px -8px rgba(0,0,0,0.75);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 88%, rgba(133,133,133,1) 100%); 
+}
+.ofertastatica img{
+    width: 100%;
+    height: 100%;}
+
+.ofertaCarrosel{
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(249,246,246,1) 79%, rgba(110,161,201,1) 99%);
+    height: 420px;
+    align-items: center;
+    font-family: var(--fontText);
+    display: flex;
+    border-radius: 10px;
+    gap: 1rem;
+   
+    box-shadow: 4px 13px 22px -8px rgba(0,0,0,0.75);
+} 
+
+
+.card3{
+    padding: 20px;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+
+}
+
+
+.textoChamativo{
+    padding: 5px;
+    display: flex;
+    font-size: 20px;
+    box-shadow: 4px 13px 22px -8px rgba(0,0,0,0.75);
+    
+}
+.correselLetreiroCard{
+    
+}
+
+.card2{
+    border-radius:7px ;
+    background: #E6E6E6;
+    text-align: center;
+    padding: 10px;
+    gap:5px;
+    display: flex;
+    flex-direction: column;
+
+}
+.carroselContainer {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+.card2 {
+    min-width: 200px; 
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+    font-family: var(--fontText);
+}
+
+
+.buttonsPasseAnte {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    background: #ffffff00;
+}
+
+.buttonsPasseAnte img {
+    width: 50px; 
+    height: 50px;
+}
+
+
+
+.buttonsPasseAnte:last-of-type {
+    right: 10px; /* Botão "próximo" */
+}
+
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card2 {
+    flex: 0 0 auto;
+    width: 200px; /* Ajuste a largura conforme necessário */
+    margin-right: 10px; /* Espaçamento entre os cards */
+    text-align: center;
+}
+
+.buttonsPasseAnte {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.ofertaCarrosel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Garante que os cards não ultrapassem a borda */
+}
+
+.carroselContainer {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card3 {
+    flex: 0 0 auto;
+    width: 200px; 
+    margin-right: 10px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    font-family: var(--fontText);
+}
+
+.buttonsAnteOferta, .buttonsPasseOferta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.buttonsAnteOferta {
+    left: 10px;
+}
+
+.buttonsPasseOferta {
+    right: 10px;
+}
+
+.tituloOfertas{
+   display: flex;
+   justify-content:end;
+   position: relative;
+    bottom: 170px;
+   align-items: center;
+   text-align: row;
+   left: 450px;
+
+}
+.ofertas{
+    background-color: #ECECEC;
+}
+.categorias{
+background-color: #EBEBEB;
+}
+
+
+.grid{
+    display: grid;
+    height: 500px;
+    
+    margin: auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 4px 13px 22px -8px rgba(0,0,0,0.75);
+
+}
+.imgCategoria{
+    width:101px ;
+    height: 90;
+}
+.carroselGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    gap: 4rem;
+}
+.grid h2{
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--fontText);
+    color: var(--colorText);
+    padding: 20px;
+    letter-spacing: 2px;
+    
+    
+
+}
+
+.categoria{
+    display: flex;
+    
+   
+    
+
+}
+
+
+.categoria a{
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    background-color: #e1e1e1;
+    padding: 0px 0px 0px 20px;
+    gap:2rem;
+    
+    border-radius:10px ;
+}
+.categoria a img{
+    background-color:#A4A4A4;
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
