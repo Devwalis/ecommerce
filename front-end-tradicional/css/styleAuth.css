@@ -206,8 +206,12 @@ a{
 .subtitulo{
     color: #333;
 }
+.action-icon{
+    height: 25px;
+}
 .pesquisa{
     display: flex;
+    gap: 10px;
 }
 .detalhe{
     position: relative;
