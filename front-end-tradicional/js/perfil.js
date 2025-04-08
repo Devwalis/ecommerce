@@ -1,3 +1,7 @@
+
+
+
+
 document.addEventListener('DOMContentLoaded', function(){
     const dropdown = document.querySelector('.dropdown-perfil')
     const toggleBtn = document.querySelector('.perfil-toggle')
@@ -19,3 +23,12 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 });
+
+
+function  logout() {
+    localStorage.removeItem('jwtToken');
+    localStorage.removeItem('userType');
+    window.location.href = 'login.html';
+    
+
+}
