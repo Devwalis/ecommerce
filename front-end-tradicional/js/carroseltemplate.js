@@ -293,10 +293,4 @@ document.addEventListener('click', function(event){
     }
 })
 
-function  logout() {
-    localStorage.removeItem('jwtToken');
-    localStorage.removeItem('userType');
-    window.location.href = 'login.html';
-    
 
-}

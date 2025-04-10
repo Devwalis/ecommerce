@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
 function  logout() {
     localStorage.removeItem('jwtToken');
     localStorage.removeItem('userType');
+    localStorage.removeItem('carrinhoContador');
     window.location.href = 'login.html';
     
 
