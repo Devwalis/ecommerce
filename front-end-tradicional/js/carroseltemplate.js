@@ -115,7 +115,7 @@ function createCards(data) {
             <img src="${item.imageSrc}" alt="${item.title}">
             <h2>${item.title}</h2>
             <p>${item.price}</p>
-            <button>${item.buttonText}</button>
+            <button class="btn-adicionar-carrinho">${item.buttonText}</button>
         `;
 
         carouselInner.appendChild(card);
@@ -225,7 +225,7 @@ function ConstruirtCardDinamico(pega) {
             <img src="${item.imageSrc}" alt="Produto Mouse">
             <h2>${item.title}</h2>
             <p>${item.price}</p>
-            <button>${item.buttonText}</button>
+            <button class="btn-adicionar-carrinho">${item.buttonText}</button>
         `;
         cardContainer.appendChild(card);
     });
@@ -253,3 +253,42 @@ function passaCarrosel(direction) {
 }
 
 document.addEventListener('DOMContentLoaded', carregarcard);
+
+
+function usuarioEstaAutenticado(){
+    return localStorage.getItem('token') !== null;
+}
+
+function adicionarAoCarrinho(){
+    if(!usuarioEstaAutenticado()){
+        alert('Por favor, faça login para adicionar itens ao carrinho.');
+        window.location.href ='login.html;'
+        return;
+    }
+  
+    let contador = parseInte(localStorage.getItem('carrinhoContador')) || 0;
+contador++;
+localStorage.setItem('carrinhoContador', contador);
+atualizarContadorCarrinho(contador);
+
+
+}
+
+function atualizarContadorCarrinho(contador){
+    const elementosContador = document.querySelectorAll('.carrinho-contador');
+    elementosContador.forEach(span => span.textContent = contador);
+}
+
+
+//Atualizar contador ao carregar a página 
+document.addEventListener('DOMContentLoaded', () =>{
+    const contador = parInt(localStorage.getItem('carrinhoContador')) || 0;
+    atualizarCarrinhoContador(contador);
+})
+
+//Delegar eventos para todos os botões de adicionar ao carrinho
+document.addEventListener('click', function(event){
+    if(event.target.classList.contains('btn-adicionar-carrinho')){
+        adicionarAoCarrinho();
+    }
+})

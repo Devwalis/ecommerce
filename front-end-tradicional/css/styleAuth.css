@@ -45,6 +45,21 @@ header{
     width: 300px;
     justify-content: space-evenly;
 }
+.icon-carrinho{
+position: relative;
+}
+.carrinho-contador {
+    position: absolute;
+    top:-8px;
+    right:-8px;
+    background: #ff0000;
+    color:white;
+    border-radius: 100%;
+    padding: 4px 8px;
+    font-size: 12px;
+    height: 20px;
+
+}
 
 
 .dropdown-perfil {
