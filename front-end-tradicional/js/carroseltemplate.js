@@ -256,17 +256,17 @@ document.addEventListener('DOMContentLoaded', carregarcard);
 
 
 function usuarioEstaAutenticado(){
-    return localStorage.getItem('token') !== null;
+    return localStorage.getItem('token') !== null && localStorage.getItem('jwtToken') !== '';
 }
 
 function adicionarAoCarrinho(){
     if(!usuarioEstaAutenticado()){
         alert('Por favor, faça login para adicionar itens ao carrinho.');
-        window.location.href ='login.html;'
+        window.location.href ='login.html';
         return;
     }
   
-    let contador = parseInte(localStorage.getItem('carrinhoContador')) || 0;
+    let contador = parseInt(localStorage.getItem('carrinhoContador')) || 0;
 contador++;
 localStorage.setItem('carrinhoContador', contador);
 atualizarContadorCarrinho(contador);
@@ -292,3 +292,11 @@ document.addEventListener('click', function(event){
         adicionarAoCarrinho();
     }
 })
+
+function  logout() {
+    localStorage.removeItem('jwtToken');
+    localStorage.removeItem('userType');
+    window.location.href = 'login.html';
+    
+
+}
