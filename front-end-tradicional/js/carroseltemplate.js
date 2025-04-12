@@ -2,10 +2,10 @@ const Carrosel = {
 
         imagens: [
         { id: '1',
-         background: 'image/african-family-animate.svg', 
-        front: 'image/mouses/mouse1 2.png', 
-        tag: 'image/Group 115.png',
-         title: 'Mouse' },
+            background: 'image/african-family-animate.svg', 
+            front: 'image/mouses/mouse1 2.png', 
+            tag: 'image/Group 115.png',
+            title: 'Mouse' },
 
         { id: '2', background: 'image/african-family-animate.svg',
              front: 'image/fones/fone1.png', 
