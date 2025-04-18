@@ -9,43 +9,50 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="logo">
             <img src="image/logo.png" alt="">
             <h2>Blue Technology</h2>
              <i> <img src="image/icons/icondepesquisa.png" alt=""></i>
             <input type="text" placeholder="Procurar..."> 
         </div>
-    </header>
+        
+        <div class="user-action">
 
-    <div class="user-action">
-        <div class="notification-badge">
-            <a href="notificações">
-                <img src="image/icons/notificacao.svg" alt="Notificações" class="action-icon">
-            </a>
-            <span class="badge">3</span>
-
-
+            <div class="notification-badge">
+                <a href="notificações">
+                    <img src="image/icons/notificacao.svg" alt="Notificações" class="action-icon">
+                </a>
+                <span class="badge">3</span>
+            </div>
+           
+            
             <div class="dropdown-perfil">
                 <button class="perfil-toggle">
-                    <img src="image/icons/person-circle.svg" alt="Perfil" class="action-icon">
+                    <div class="profile-header">
+                        
+                        <div class="profile-info">
+                            <p>Adam Wali</p>
+                            <p>Administrador</p>
+                        </div>
+                        <i class="toggle-arrow">
+                            <img src="image/roleUser.png" alt="Menu">
+                        </i>
+                    </div>
                 </button>
-                <div class="dowpdown-content">
-                    <a href="enderecos.html" class="dropdown-item">Meus Endereços</a>
-                    <a href="pedidos.html" class="dropdown-item">Meus Pedidos</a>
-                    <a href="suporte.html" class="dropdown-item"> Suporte</a>
+                <div class="dropdown-content">
+                    <a href="suporte.html" class="dropdown-item">Suporte</a>
                     <hr class="divide">
                     <a href="#" class="dropdown-item" id="logoutLink">Sair</a>
                 </div>
-
-                <div>
-                    <p>Adam Wali</p>
-                    <p>Administrador</p>
-                    <i><img src="image/roleUser.png" alt=""></i>
-                </div>
+       
             </div>  
-        </div>
+       
+    </header>
+    
 
-        <nav class="">
+    
+
+        <nav class="navbar">
             <a href="inicio">
                 <img src="image/Bulleted List.png" alt="Notificações" class="action-icon">
             </a>
@@ -135,8 +142,8 @@
 
 </main>
      
+    <script src="js/admPerfil.js"></script>
 
-    <script src="js/graficos.js"></script>
 </body>
 
 </html>

@@ -18,3 +18,77 @@
     --fontText: Urbanist;
 
 }
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.user-action{
+    display: flex;
+    justify-content: right;
+}
+
+.dropdown-perfil {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-arrow {
+    margin-left: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content.active {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 12px 16px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.divide {
+    margin: 0;
+    border-color: #ddd;
+}
+
+.toggle-arrow img {
+ 
+    
+    transition: transform 0.3s;
+}
+.navbar{
+    height: 200px;
+    background-color: #56A0DC;
+}
