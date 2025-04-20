@@ -99,3 +99,33 @@ header{
     padding: 10px;
 
 }
+main{
+    display: flex;
+   justify-content: center;
+   gap: 2rem;
+   position: relative;
+   bottom: 800px;
+}
+.buttons{
+    position: relative;
+    bottom: 100px;
+    width: 500px;
+  
+    display: flex;
+    justify-content: center;
+}
+
+
+.monitoramento-header{
+    display: flex;
+    align-items: center;
+    height: 140px;
+    flex-direction: column;
+    z-index: 99999;
+    position: relative;
+    bottom: 10px;
+    left: 100px;
+    background-color: #56A0DC;
+
+    
+}
