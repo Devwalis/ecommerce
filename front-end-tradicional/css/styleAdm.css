@@ -89,6 +89,13 @@ header{
     transition: transform 0.3s;
 }
 .navbar{
-    height: 200px;
+    height: 930px;
     background-color: #56A0DC;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+
 }
