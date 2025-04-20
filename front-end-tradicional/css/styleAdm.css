@@ -18,23 +18,93 @@
     --fontText: Urbanist;
 
 }
+p{
+    font-family: var(--fontText);
+    letter-spacing: 1px;
+}
+h2{
+    font-family: var(--fontText);
+    letter-spacing: 1px;
+}
+body{
+   background-color:#EEF2F8 ; 
+}
+
+/*
+.interface{
+    max-width: 1250px;
+}*/
 header{
     display: flex;
     justify-content: space-between;
+    
+    padding: 5px 15px;
 }
 .logo{
     display: flex;
     gap: 1rem;
     align-items: center;
+    
 }
+.action-icon{
+    width: 20px;
+    height: 20px;
+}
+.icons{
+    width: 30px;
+    height: 30px;
+}
+.perfil-toggle{
+    background-color: #FFFFFF;
+}
+
+
 .user-action{
     display: flex;
     justify-content: right;
-}
+    align-items: center;
+    gap: 1rem;
+    padding:10px}
 
 .dropdown-perfil {
     position: relative;
     display: inline-block;
+}
+button{
+    padding: 0px 10px 0px 10px;
+   
+    border:0;
+    border-radius: 10px;
+
+}
+
+.Buttons{
+    background-color:#BFE7A0;
+    letter-spacing: 1px;
+}
+.bottons{
+    height: 50px;
+    width: 466px;
+    background-color: #EBF6FF;
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.buttonRelatorio{
+    padding: 10px 40px;
+    background-color:  #C5E0F4;
+}
+#butoncolor{
+    background-color: #BCD0D4;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
 }
 
 .profile-header {
@@ -83,6 +153,7 @@ header{
     border-color: #ddd;
 }
 
+
 .toggle-arrow img {
  
     
@@ -90,7 +161,8 @@ header{
 }
 .navbar{
     height: 930px;
-    background-color: #56A0DC;
+    background: #FFFFFF;
+    background: linear-gradient(180deg,rgba(219, 229, 237, 1) 0%, rgba(150, 182, 206, 1) 14%, rgba(170, 195, 213, 1) 57%, rgba(179, 200, 216, 1) 100%);
     width: 90px;
     display: flex;
     flex-direction: column;
@@ -126,9 +198,12 @@ main{
     position: relative;
     bottom: 930px;
     left: 130px;
-    background-color: #56A0DC;
-    width: 1350px;
+    background: #FFFFFF;
+    background: linear-gradient(175deg,rgba(255, 255, 255, 1) 0%, rgba(202, 230, 251, 1) 61%, rgba(194, 220, 240, 1) 79%, rgba(171, 194, 212, 1) 93%);
+    
 gap: 10px;
+margin-right: 200px;
+border-radius: 0px 0px 10px 10px;
     
 }
 .butons{
@@ -137,22 +212,38 @@ gap: 10px;
 }
 .graficos{
     position: relative;
-    width:532px ;
+    width:532px;
     border: 1px solid black;
-    left: 20px;
+    left: 50px;
+    bottom: 115px;
+    height: 450px;
+    background-color: #FFFFFF;
 }
 .metricas{
     width: 775px;
     border: 1px solid black;
-    left: 20px;
+    left: 12px;
     position: relative;
+    bottom: 115px;
+    background-color: #FFFFFF;
 }
 hr{
     position: relative;
-    left: 35px;
+    left: 30px;
     bottom: 115px;
 
 }
+
+
+.pesquisarRelatorios{
+display: flex;
+gap: 1rem;
+padding: 10px;
+justify-content: center;
+}
+
+    
+
 #graficoVendas {
     display: flex;
     align-items: flex-end;
