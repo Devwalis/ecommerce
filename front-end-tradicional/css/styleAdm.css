@@ -105,6 +105,7 @@ main{
    gap: 2rem;
    position: relative;
    bottom: 800px;
+   flex-wrap: wrap;
 }
 .buttons{
     position: relative;
@@ -118,14 +119,70 @@ main{
 
 .monitoramento-header{
     display: flex;
-    align-items: center;
+   padding: 2rem;
     height: 140px;
     flex-direction: column;
     z-index: 99999;
     position: relative;
-    bottom: 10px;
-    left: 100px;
+    bottom: 930px;
+    left: 130px;
     background-color: #56A0DC;
-
+    width: 1350px;
+gap: 10px;
     
 }
+.butons{
+    display: flex;
+    gap: 10px;
+}
+.graficos{
+    position: relative;
+    width:532px ;
+    border: 1px solid black;
+    left: 20px;
+}
+.metricas{
+    width: 775px;
+    border: 1px solid black;
+    left: 20px;
+    position: relative;
+}
+hr{
+    position: relative;
+    left: 35px;
+    bottom: 115px;
+
+}
+#graficoVendas {
+    display: flex;
+    align-items: flex-end;
+    height: 300px;
+    padding: 20px;
+    gap: 10px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+  }
+
+  #graficoVendas .barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+  }
+
+  #graficoVendas .valor {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.3s ease;
+  }
+
+  #graficoVendas .porcentagem {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  #graficoVendas .mes {
+    font-size: 12px;
+    margin-top: 4px;
+  }
