@@ -1,42 +1,67 @@
  // Dados fixos por enquanto (depois você vai substituir pelo fetch da API)
- const dados = [
-    { mes: "Jan", valor: 100, cor: "#f28c8c", percentual: "1%" },
-    { mes: "Fev", valor: 150, cor: "#f8b84e", percentual: "2%" },
-    { mes: "Mar", valor: 200, cor: "#f2da4a", percentual: "3%" },
-    { mes: "Abr", valor: 600, cor: "#a5d68b", percentual: "12%" },
-    { mes: "Mai", valor: 1050, cor: "#6cb5f2", percentual: "17%" },
-    { mes: "Jun", valor: 450, cor: "#83b0c9", percentual: "10%" },
-    { mes: "Jul", valor: 200, cor: "#c5a4f5", percentual: "5%" },
-    { mes: "Ago", valor: 450, cor: "#a27fe9", percentual: "10%" },
-    { mes: "Set", valor: 450, cor: "#a27fe9", percentual: "10%" },
-    { mes: "Out", valor: 500, cor: "#71c7ec", percentual: "15%" },
-    { mes: "Nov", valor: 450, cor: "#9fd9f6", percentual: "10%" },
-    { mes: "Dez", valor: 450, cor: "#9fd9f6", percentual: "10%" },
-  ];
+ // Dados mockados
+ const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 
+  'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 
-  const max = Math.max(...dados.map(d => d.valor));
-  const grafico = document.getElementById("graficoVendas");
+const mockData = months.map(() => ({
+sales: Math.floor(Math.random() * 1000) + 100,
+percentage: 0
+}));
 
-  dados.forEach(d => {
-    const barra = document.createElement("div");
-    barra.className = "barra";
+// Calcular totais e porcentagens
+const totalSales = mockData.reduce((acc, curr) => acc + curr.sales, 0);
+mockData.forEach(data => {
+data.percentage = ((data.sales / totalSales) * 100).toFixed(1);
+});
 
-    const percentual = document.createElement("div");
-    percentual.className = "porcentagem";
-    percentual.textContent = d.percentual;
+// Configurações do gráfico
+const maxYValue = 1000;
+const yAxisValues = [100, 200, 300, 500, 800, 1000];
+const chartHeight = 400; // Altura do gráfico em pixels
 
-    const valor = document.createElement("div");
-    valor.className = "valor";
-    valor.style.height = `${(d.valor / max) * 100}%`;
-    valor.style.backgroundColor = d.cor;
+// Criar eixos Y
+const yAxis = document.querySelector('.y-axis');
+yAxisValues.forEach(value => {
+const position = ((maxYValue - value) / maxYValue) * 100;
 
-    const mes = document.createElement("div");
-    mes.className = "mes";
-    mes.textContent = d.mes;
+// Linha de grade
+const gridLine = document.createElement('div');
+gridLine.className = 'grid-line';
+gridLine.style.top = `${(value / maxYValue) * 100}%`;
+document.querySelector('.chart-area').appendChild(gridLine);
 
-    barra.appendChild(percentual);
-    barra.appendChild(valor);
-    barra.appendChild(mes);
+// Label do eixo Y
+const yLabel = document.createElement('div');
+yLabel.className = 'y-label';
+yLabel.textContent = value;
+yLabel.style.top = `${position}%`;
+yAxis.appendChild(yLabel);
+});
 
-    grafico.appendChild(barra);
-  });
+// Criar colunas
+const columnsContainer = document.querySelector('.columns-container');
+mockData.forEach((data, index) => {
+const column = document.createElement('div');
+column.className = 'column';
+
+// Altura da coluna
+const columnHeight = (data.sales / maxYValue) * chartHeight;
+column.style.height = `${columnHeight}px`;
+
+// Label de porcentagem
+const percentageLabel = document.createElement('div');
+percentageLabel.className = 'percentage-label';
+percentageLabel.textContent = `${data.percentage}%`;
+column.appendChild(percentageLabel);
+
+columnsContainer.appendChild(column);
+});
+
+// Criar eixos X
+const xAxis = document.querySelector('.x-axis');
+months.forEach(month => {
+const label = document.createElement('div');
+label.className = 'x-axis-label';
+label.textContent = month;
+xAxis.appendChild(label);
+});

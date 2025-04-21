@@ -40,6 +40,9 @@ header{
     
     padding: 5px 15px;
 }
+.titleLogo{
+    font-weight: 200;
+}
 .logo{
     display: flex;
     gap: 1rem;
@@ -71,8 +74,8 @@ header{
     display: inline-block;
 }
 button{
+    
     padding: 0px 10px 0px 10px;
-   
     border:0;
     border-radius: 10px;
 
@@ -81,6 +84,9 @@ button{
 .Buttons{
     background-color:#BFE7A0;
     letter-spacing: 1px;
+    padding: 5px 10px 5px 10px;
+    
+    
 }
 .bottons{
     height: 50px;
@@ -206,6 +212,9 @@ margin-right: 200px;
 border-radius: 0px 0px 10px 10px;
     
 }
+.totalVendas{
+    font-weight: 500;
+}
 .butons{
     display: flex;
     gap: 10px;
@@ -213,7 +222,7 @@ border-radius: 0px 0px 10px 10px;
 .graficos{
     position: relative;
     width:532px;
-    border: 1px solid black;
+   
     left: 50px;
     bottom: 115px;
     height: 450px;
@@ -221,17 +230,30 @@ border-radius: 0px 0px 10px 10px;
 }
 .metricas{
     width: 775px;
-    border: 1px solid black;
+   
     left: 12px;
     position: relative;
     bottom: 115px;
     background-color: #FFFFFF;
+    padding: 20px 10px;
 }
 hr{
     position: relative;
     left: 30px;
     bottom: 115px;
+    color: #f9f9f9;
 
+}
+.metricaVendedor{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    gap: 2rem;
+}
+.cardInfo{
+    background-color:#E4ECFC;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
@@ -244,36 +266,99 @@ justify-content: center;
 
     
 
-#graficoVendas {
-    display: flex;
-    align-items: flex-end;
-    height: 300px;
-    padding: 20px;
-    gap: 10px;
-    border-left: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
+.chart-container {
     position: relative;
-  }
+    width: 1200px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+}
 
-  #graficoVendas .barra {
+.y-axis {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 40px;
+    width: 40px;
+}
+
+.chart-area {
+    margin-left: 40px;
+    height: 300px;
+    position: relative;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    width: 500px;
+}
+
+.grid-line {
+    position: absolute;
+    width: 100%;
+    border-top: 1px dashed #ccc;
+}
+
+.columns-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+
+.column {
+    width: 4%;
+    background-color: #4CAF50;
+    position: relative;
+    transition: height 0.3s;
+    margin: 0 1%;
+}
+
+.percentage-label {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.x-axis {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40px;
+    padding: 5px 20px;
+    width: 500px;
+}
+
+.x-axis-label {
+    width: 8.33%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.y-label {
+    position: absolute;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+  .btnsListas{
+    display: flex;
+    gap: 2rem;
+    padding-bottom:  10px;
+  }
+  .Verificado{
+    display: flex;
+    gap: 5px;
+    padding: 10px 0px 20px 0px;
+}
+
+
+.vendedores{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 40px;
-  }
-
-  #graficoVendas .valor {
-    width: 100%;
-    border-radius: 4px 4px 0 0;
-    transition: height 0.3s ease;
-  }
-
-  #graficoVendas .porcentagem {
-    font-size: 10px;
-    margin-bottom: 4px;
-  }
-
-  #graficoVendas .mes {
-    font-size: 12px;
-    margin-top: 4px;
-  }
+    gap: 8px;
+}
