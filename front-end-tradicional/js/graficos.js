@@ -17,7 +17,7 @@ data.percentage = ((data.sales / totalSales) * 100).toFixed(1);
 // Configurações do gráfico
 const maxYValue = 1000;
 const yAxisValues = [100, 200, 300, 500, 800, 1000];
-const chartHeight = 400; // Altura do gráfico em pixels
+const chartHeight = 300; // Altura do gráfico em pixels
 
 // Criar eixos Y
 const yAxis = document.querySelector('.y-axis');

@@ -301,7 +301,7 @@ justify-content: center;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 30px;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -310,10 +310,11 @@ justify-content: center;
 
 .column {
     width: 4%;
-    background-color: #4CAF50;
+    background-color: #56A0DC;
     position: relative;
-    transition: height 0.3s;
+   
     margin: 0 1%;
+    height: 10px;
 }
 
 .percentage-label {
