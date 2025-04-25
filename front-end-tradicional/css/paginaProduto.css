@@ -18,14 +18,139 @@
     --fontText: Urbanist;
 
 }
-p{
-    font-family: var(--fontText);
-    letter-spacing: 1px;
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
 }
-h2{
+
+.flex{
+    display: flex;
+    gap: 2rem;
+}
+header{
+    background-color: var(--secundcolor);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+.user-action{
+    display: flex;
+    gap: 3rem;
+    position: relative;
+    right: 100px;
+    box-shadow: 2px 10px 11px -6px rgba(0,0,0,0.6);
+    width: 300px;
+    justify-content: space-evenly;
+}
+.icon-carrinho{
+position: relative;
+}
+.carrinho-contador {
+    position: absolute;
+    top:-8px;
+    right:-8px;
+    background: #ff0000;
+    color:white;
+    border-radius: 100%;
+    padding: 4px 8px;
+    font-size: 12px;
+    height: 20px;
+
+}
+
+
+.dropdown-perfil {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-perfil div {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+    z-index: 1000;
+}
+
+.dropdown-perfil.active div {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: #f5f5f5;
+}
+
+.divide {
+    margin: 5px 0;
+    border-color: #eee;
+}
+
+.perfil-toggle {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.perfil-toggle img {
+    width: 32px;
+    height: 32px;
+}
+.navbar{
+    display: flex;
+    gap: 2rem;
     font-family: var(--fontText);
-    letter-spacing: 1px;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    right: 300px;
+}
+
+header a{
+    text-decoration: none;
+    font-family: var(--fontText);
+}
+
+
+select{
+    border: none;
+    padding: auto;
+    background-color: var(--secundcolor);
+    font-family: var(--fontText);
+    cursor: pointer;
+    font-size: 15px;
+}
+#textcolor{
+    color: var(--primarycolor);
+}
+#textcolor:hover{
+    color: var(--tercerycolor);
+    transition: 2ms;
+}
+option{
+    font-family: var(--fontText);
+    
 }
 body{
-   background-color:#EEF2F8 ; 
+    background-color:#EFEFEF ;
 }
