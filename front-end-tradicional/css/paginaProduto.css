@@ -167,3 +167,42 @@ main{
 h2, h3, p{
     font-family: var(--fontText);
 }
+.cardProduto{
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.imgProduto{
+    align-items: justify;
+ 
+}
+.buttonsCores{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+
+
+}
+.Card-Produto{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.CoresButton{
+    padding: 6px 10px;
+    background:#FFFF;
+    border: solid 1px rgb(74, 74, 74);
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.CoresButton:hover{
+    background-color: #7b7b7b;
+   
+}
