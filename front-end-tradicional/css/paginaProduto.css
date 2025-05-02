@@ -157,5 +157,13 @@ body{
 main{
     max-width: 1280px;
     background-color: #ffffff;
-    margin: 0 auto;
+    margin: 30px auto;
+    padding: 20px;
+}
+.imgProduto{
+    height: 320px;
+    width: 350px;
+}
+h2, h3, p{
+    font-family: var(--fontText);
 }
