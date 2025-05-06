@@ -238,3 +238,19 @@ h2, h3, p{
 
 
 }
+
+.titulos1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0px 0px 10px;
+}   
+
+.imgLoja{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.logoLoja{
+    width: 50px;
+}
