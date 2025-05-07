@@ -262,3 +262,12 @@ h2, h3, p{
     padding-top: 10px;
 
 }
+.buttonsCores{
+    padding-bottom: 2rem;
+}
+.btnCard:hover{
+    background-color: #56A0DC;
+    cursor: pointer;
+    transition: 1s;
+    
+}
