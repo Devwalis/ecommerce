@@ -27,7 +27,7 @@
 .flex{
     display: flex;
     gap: 10rem;
-    justify-content: center;
+    
   padding: 0px 0px 20px 0px;
 }
 header{
@@ -113,7 +113,10 @@ position: relative;
     padding: 5px;
     cursor: pointer;
 }
-
+.action-icon{
+    width: 25px;
+    height: 25px;
+}
 .perfil-toggle img {
     width: 32px;
     height: 32px;
@@ -270,4 +273,30 @@ h2, h3, p{
     cursor: pointer;
     transition: 1s;
     
+}
+hr{
+    width: 700px;
+}
+.produtosRelacionados{
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+    flex-direction:;
+    
+}
+
+.imgProdutoRelacionado{
+    width: 180px;
+    height: 180px;
+}
+.cardProdutoRelacionados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    justify-content: left;
+    gap: 5px;
+    width: 239px;
+    height: 289px;
+    border: solid 1px black;
 }
