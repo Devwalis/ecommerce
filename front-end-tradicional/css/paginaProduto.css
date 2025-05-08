@@ -280,8 +280,8 @@ hr{
 .produtosRelacionados{
     display: flex;
     gap: 1rem;
-    padding: 10px;
-    flex-direction:;
+   padding-top: 10px;
+   
     
 }
 
