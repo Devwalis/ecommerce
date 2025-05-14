@@ -177,6 +177,7 @@ h2, h3, p{
      flex-direction: column;
     align-items: center;
     gap: 10px;
+  
 }
 .imgProduto{
     align-items: justify;
@@ -190,11 +191,32 @@ h2, h3, p{
 
 
 }
+.imgProdutos{
+     display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.SubImgProduto{
+    width: 50px;
+    height: 50px;
+    border: solid 1px black;
+   
+}
 .Card-Produto{
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
+    justify-content: center;
+}
+.precoProduto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .CoresButton{
