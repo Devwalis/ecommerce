@@ -211,12 +211,17 @@ h2, h3, p{
     gap: 8px;
     align-items: center;
     justify-content: center;
+    height: 390px;
+    top: 20px;
+    position: relative;
 }
 .precoProduto{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    position: relative;
+    right: 70px;
 }
 
 .CoresButton{
@@ -244,6 +249,18 @@ h2, h3, p{
     width: 300px;
     
 
+}
+.estrelasAvalicoes{
+    height: 15px;
+    width: 20px;
+    
+}
+.avaliacoes{
+    display: flex;
+    position: relative;
+    bottom: 32px;
+    left: 25px;
+    gap: 0.5px;
 }
 .buttons{
     display: flex;
