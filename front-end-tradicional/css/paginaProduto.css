@@ -314,9 +314,7 @@ h2, h3, p{
     transition: 1s;
     
 }
-hr{
-    width: 700px;
-}
+
 .produtosRelacionados{
     display: flex;
     gap: 1rem;
