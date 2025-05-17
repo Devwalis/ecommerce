@@ -362,10 +362,28 @@ h2, h3, p{
     color: #3483FA;
     font-family: var(--fontText);
 }
+.linhaSection{
+    max-width: 700px;
+    color: #eeeeee;
+
+}
 
 .linkPerfilVendedor{
     color: #3483FA;
     text-decoration: none;
     font-family:var(--fontText);
     font-size: 15px;
+}
+.cardsLaterais{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.opcoesPagamentos{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 1rem;
+    border: solid 1px rgb(183, 183, 183);
+    border-radius: 5px;
 }
