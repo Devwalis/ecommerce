@@ -387,3 +387,28 @@ h2, h3, p{
     border: solid 1px rgb(183, 183, 183);
     border-radius: 5px;
 }
+.buttonsCompraeCarrinho{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+}
+
+.buttonsOpcoes{
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3483FA;
+    color: white;
+}
+#butonAdc{
+    background-color: #4189e681;
+    color: #3483FA;
+
+}
+
+.buttonsOpcoes:hover{
+    background-color: #565ddc;
+    transition: 1s;
+    cursor: pointer;
+}
