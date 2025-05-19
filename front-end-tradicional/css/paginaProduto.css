@@ -410,6 +410,12 @@ h2, h3, p{
     color: #3483FA;
 
 }
+.linkOpcoesPrecos{
+    text-decoration: none;
+    font-family: var(--fontText);
+    color:#3483FA ;
+ 
+}
 
 .buttonsOpcoes:hover{
     background-color: #565ddc;
@@ -420,4 +426,8 @@ h2, h3, p{
 .imgCard{
     display: flex;
     justify-content: center;
+}
+.linha{
+    
+    
 }
