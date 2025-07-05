@@ -90,7 +90,7 @@ button{
 }
 .bottons{
     height: 50px;
-    width: 466px;
+    
     background-color: #EBF6FF;
     margin: 0 auto;
     display: flex;
@@ -100,7 +100,7 @@ button{
     gap: 1rem;
 }
 .buttonRelatorio{
-    padding: 10px 40px;
+    padding: 5px 20px;
     background-color:  #C5E0F4;
 }
 #butoncolor{
@@ -221,8 +221,8 @@ border-radius: 0px 0px 10px 10px;
 }
 .graficos{
     position: relative;
-    width:532px;
-   
+    width:400px;
+   overflow-y:auto ;
     left: 50px;
     bottom: 115px;
     height: 450px;
@@ -287,7 +287,7 @@ justify-content: center;
     position: relative;
     border-left: 1px solid #000;
     border-bottom: 1px solid #000;
-    width: 500px;
+    width: 375px;
 }
 
 .grid-line {
@@ -301,11 +301,12 @@ justify-content: center;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 50px;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     padding: 0 20px;
+    width: 380px;
 }
 
 .column {
@@ -331,7 +332,7 @@ justify-content: center;
     justify-content: space-around;
     margin-left: 40px;
     padding: 5px 20px;
-    width: 500px;
+    width: 380px;
 }
 
 .x-axis-label {
